@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "block-outlines-addon",
+  "version": "${version}",
+  "name": "Better Render",
+  "description": "Meteor addon: smooth block outline, spinning icon and break ESP.",
+  "authors": [
+    "Just_Lukipuh"
+  ],
+  "icon": "assets/blockoutlines/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "meteor": [
+      "com.blockoutlines.addon.BlockOutlinesAddon"
+    ]
+  },
+  "mixins": [
+    "block-outlines.mixins.json"
+  ],
+  "custom": {
+    "meteor-client:color": "40,40,40",
+    "modmenu": {
+      "parent": {
+        "id": "meteor-client"
+      }
+    }
+  },
+  "depends": {
+    "java": ">=21",
+    "minecraft": ["${mc_version}"],
+    "meteor-client": "*"
+  }
+}
